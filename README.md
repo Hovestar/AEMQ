@@ -17,4 +17,8 @@ _CU Robotics Club Software Team_
 |Driver software  | COnrad and Josh      | 2/21/14 |
 |Communication Software | Cy and Josh    | 2/21/14 |
 |Design API for acquiring IMU data| Matt and Cy| 2/21/14|
+|Design API for driving flight motors| Matt and Conrad| 2/28/14|
+|Implement IMU API|  | 2/28/14|
+|Implement Flight Controls and Stabilization| | 3/21/14|
+
 
