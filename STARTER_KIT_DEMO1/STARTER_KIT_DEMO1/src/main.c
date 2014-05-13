@@ -71,6 +71,7 @@
 #include <asf.h>
 #include <string.h>
 #include <ioport.h>
+#include <delay.h>
 
 /* These settings will force to set and refresh the temperature mode. */
 volatile uint32_t app_mode = 2;
@@ -672,16 +673,35 @@ int main()
 	// Initialize GPIO states.
 	board_init();
 	
+	// set GPIO on pin 5 to be an output
+	ioport_set_pin_dir(EXT1_PIN_5, IOPORT_DIR_OUTPUT);
+	
 	while(1)
 	{
-		if(i == 1000000)
+		// Use 400Hz servo PWM period --> 2.5ms pulse spacing
+		// pulse width between 0.6 and 2.4ms
+		
+		// Slow single beeps means throttle signal is abnormal
+		// Fast single beeps means throttle stick not in "bottom" position
+		
+		// start pulse
+		ioport_set_pin_level(EXT1_PIN_5, true);
+		delay_us(1500); // 1.5 ms delay = 1500 microseconds
+		ioport_set_pin_level(EXT1_PIN_5, false);
+		// end pulse
+		// delay for another 1ms to complete 400Hz cycle
+		delay_us(1000);
+		
+		
+		/*if(i == 1000000)
 		{
-			ioport_set_pin_level(LED_0_PIN, LED_0_ACTIVE);
+			ioport_set_pin_level(EXT1_PIN_5, true);
 		}
 		else if(i == 1999999)
 		{
-			ioport_set_pin_level(LED_0_PIN, !LED_0_ACTIVE);
+			ioport_set_pin_level(EXT1_PIN_5, false);
 		}
 		i = (i+1)%2000000;
+		*/
 	}
 }
