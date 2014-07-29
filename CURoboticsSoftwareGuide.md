@@ -9,7 +9,7 @@ AEMQ notes for software development:
 	while incrementing the variable, modulus 2000000. Add an if check for the
 	variable equal to 1000000, and inside, use "ioport_toggle_pin_level(LED_0_PIN);"
 	For example, main() might look like this:
-	
+	'''
 	int main( void ) {
 		volatile int i;
 		board_init();
@@ -21,7 +21,7 @@ AEMQ notes for software development:
 			i = (i+1)%2000000;
 		}
 	}
-
+	'''
 - Now, plug a USB A to micro USB A into your computer and into the DEBUG USB port
 	on the Atmel Xplained Pro board
 - The green power light should come on
