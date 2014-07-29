@@ -26,6 +26,13 @@ AEMQ notes for software development:
 	on the Atmel Xplained Pro board
 -The green power light should come on
 -Wait if any drivers need to be installed
+
+-Hopefully Atmel Studio will detect the SAM4S -- toward the top right of the IDE,
+	you should see SAM4SD32C as the device.  The programmer should be set to
+	SWD on EDBG. You may need to set this manually by clicking on device programming.
+	Also, make sure your programming/debug settings are such that the board will
+	boot from Flash 0.  The programming clock can be any speed that is "slow enough"
+
 -Press the green debug arrow in Atmel Studio to compile, load, and launch the
 	program in debug mode on the board
 -If successful, the yellow LED0 will start blinking (LED0, not the status LED!)
