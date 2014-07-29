@@ -663,7 +663,7 @@ int main(void)
 
 */
 
-int main()
+int main( void )
 {
 	volatile int i = 0;
 	
@@ -685,23 +685,23 @@ int main()
 		// Fast single beeps means throttle stick not in "bottom" position
 		
 		// start pulse
-		ioport_set_pin_level(EXT1_PIN_5, true);
-		delay_us(1500); // 1.5 ms delay = 1500 microseconds
-		ioport_set_pin_level(EXT1_PIN_5, false);
+		//ioport_set_pin_level(EXT1_PIN_5, true);
+		//delay_us(1500); // 1.5 ms delay = 1500 microseconds
+		//ioport_set_pin_level(EXT1_PIN_5, false);
 		// end pulse
 		// delay for another 1ms to complete 400Hz cycle
-		delay_us(1000);
+		//delay_us(1000);
 		
 		
-		/*if(i == 1000000)
+		if(i == 1000000)
 		{
-			ioport_set_pin_level(EXT1_PIN_5, true);
+			ioport_set_pin_level(LED_0_PIN, true);
 		}
 		else if(i == 1999999)
 		{
-			ioport_set_pin_level(EXT1_PIN_5, false);
+			ioport_set_pin_level(LED_0_PIN, false);
 		}
 		i = (i+1)%2000000;
-		*/
+		
 	}
 }

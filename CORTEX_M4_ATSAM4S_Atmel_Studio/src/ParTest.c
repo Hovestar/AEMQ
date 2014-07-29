@@ -77,6 +77,7 @@
 /* Library includes. */
 #include <board.h>
 #include <gpio.h>
+#include <ioport.h>
 
 /* The number of LEDs available to the user on the evaluation kit. */
 #define partestNUM_LEDS			( 3UL )
@@ -91,7 +92,7 @@ the power LED. */
 /* The index of the pins to which the LEDs are connected.  The ordering of the
 LEDs in this array is intentional and matches the order they appear on the 
 hardware. */
-static const uint32_t ulLED[] = { LED2_GPIO, LED0_GPIO, LED1_GPIO };
+static const uint32_t ulLED[] = { LED_0_PIN, LED_0_PIN, LED_0_PIN };
 
 /*-----------------------------------------------------------*/
 
@@ -145,7 +146,8 @@ void vParTestToggleLED( unsigned portBASE_TYPE uxLED )
 	{
 		taskENTER_CRITICAL();
 		{			
-			gpio_toggle_pin( ulLED[ uxLED ] );
+			//gpio_toggle_pin( ulLED[ uxLED ] );
+			ioport_toggle_pin_level(LED_0_PIN);
 		}
 		taskEXIT_CRITICAL();		
 	}

@@ -186,7 +186,9 @@ extern "C" {
   #include "sam3n_ek/sam3n_ek.h"
   #include "system_sam3n.h"  
 #elif BOARD == SAM4S_EK
-  #include "sam4s_ek/sam4s_ek.h"
+  //#include "sam4s_ek/sam4s_ek.h"
+  //#include "system_sam4s.h"
+  #include "sam4s_xplained_pro/sam4s_xplained_pro.h"
   #include "system_sam4s.h"
 #elif BOARD == SAM4S_XPLAINED
   #include "sam4s_xplained/sam4s_xplained.h"

@@ -2,19 +2,23 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
+src\asf\common\services\serial\usart_serial.c
+
+src\asf\sam\boards\sam4s_xplained_pro\init.c
+
+src\asf\sam\drivers\uart\uart.c
+
 src\asf\sam\drivers\usart\usart.c
+
+src\asf\sam\drivers\wdt\wdt.c
 
 src\asf\thirdparty\FreeRTOS\portable\MemMang\heap_4.c
 
 src\Common-Demo-Source\QueueSet.c
 
-src\serial.c
-
 src\asf\common\services\clock\sam4s\sysclk.c
 
 src\asf\common\utils\interrupt\interrupt_sam_nvic.c
-
-src\asf\sam\boards\sam4s_ek\init.c
 
 src\asf\sam\drivers\pio\pio.c
 

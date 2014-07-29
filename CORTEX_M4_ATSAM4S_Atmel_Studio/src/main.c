@@ -89,6 +89,7 @@
 
 /* Atmel library includes. */
 #include <asf.h>
+#include <ioport.h>
 
 /* Set mainCREATE_SIMPLE_BLINKY_DEMO_ONLY to one to run the simple blinky demo,
 or 0 to run the more comprehensive test and demo application. */
@@ -115,8 +116,17 @@ full information - including hardware setup requirements. */
 
 int main( void )
 {
+	volatile int x;
+	volatile int other = 0;
+	
+	for(x = 0; x < 1000; ++x)
+	{
+		other = !other;
+	}
 	/* Prepare the hardware to run this demo. */
 	prvSetupHardware();
+	
+	ioport_set_pin_dir(LED_0_PIN, IOPORT_DIR_OUTPUT);
 
 	/* The mainCREATE_SIMPLE_BLINKY_DEMO_ONLY setting is described at the top
 	of this file. */
