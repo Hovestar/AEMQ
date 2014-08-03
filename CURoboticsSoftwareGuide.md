@@ -1,6 +1,6 @@
 AEMQ notes for software development:
 
-- Install Atmel Studio 6.1 update 1.1 (build 2674), without .NET 4.0 and MSVS Shell
+- Install Atmel Studio 6.1 update 1.1 (build 2674), without .NET 4.0 and MSVS Shell: http://www.atmel.com/tools/studioarchive.aspx
 - During installation, you should be prompted to first install Atmel USB drivers, which are required
 - After installing, open Atmel Studio and start a new example project
 - Choose the project for the SAM4S Xplained Pro Starter Kit
@@ -36,7 +36,7 @@ AEMQ notes for software development:
 - Once these both work, you are ready to start developing code for AEMQ
 - FreeRTOS Tutorial: http://www.freertos.org/tutorial/
 - FreeRTOS Overview: http://aosabook.org/en/freertos.html
-- Setup your GitHub account and install Git
+- Setup your GitHub account and install git
 - Fork the AEMQ repository so you have your own copy to work on
 - Commit changes often
 - Create a pull request when you are ready to have your changes picked up in the main repo.
