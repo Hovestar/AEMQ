@@ -500,6 +500,21 @@
     <Compile Include="src\ASF\common\services\gpio\sam\ioport_pio.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\Dragonfly\BatMan\inc\BatMan.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Dragonfly\Chronos\inc\Chronos.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Dragonfly\MotherBrain\inc\MotherBrain.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Dragonfly\PaulBunyan\inc\PaulBunyan.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Dragonfly\RadioComm\inc\RadioComm.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\Main\partest.h">
       <SubType>compile</SubType>
     </Compile>
@@ -984,29 +999,22 @@
     <Folder Include="src\asf\thirdparty\FreeRTOS\portable\MemMang\" />
     <Folder Include="src\Config" />
     <Folder Include="src\Dragonfly" />
-    <Folder Include="src\Dragonfly\ADC" />
-    <Folder Include="src\Dragonfly\ADC\inc" />
-    <Folder Include="src\Dragonfly\ADC\src" />
-    <Folder Include="src\Dragonfly\PIDCtrl\inc\" />
-    <Folder Include="src\Dragonfly\PIDCtrl\src\" />
-    <Folder Include="src\Dragonfly\PwrMgr\inc\" />
-    <Folder Include="src\Dragonfly\PwrMgr\src\" />
+    <Folder Include="src\Dragonfly\MotherBrain\inc" />
+    <Folder Include="src\Dragonfly\MotherBrain\src" />
+    <Folder Include="src\Dragonfly\BatMan\inc" />
+    <Folder Include="src\Dragonfly\BatMan\src" />
+    <Folder Include="src\Dragonfly\PaulBunyan" />
+    <Folder Include="src\Dragonfly\PaulBunyan\inc" />
+    <Folder Include="src\Dragonfly\PaulBunyan\src" />
     <Folder Include="src\Dragonfly\RadioComm\inc\" />
     <Folder Include="src\Dragonfly\RadioComm\src\" />
-    <Folder Include="src\Dragonfly\Range" />
-    <Folder Include="src\Dragonfly\Range\inc\" />
-    <Folder Include="src\Dragonfly\Range\src\" />
-    <Folder Include="src\Dragonfly\Stabilize" />
-    <Folder Include="src\Dragonfly\PIDCtrl" />
-    <Folder Include="src\Dragonfly\Stabilize\inc\" />
-    <Folder Include="src\Dragonfly\Stabilize\src\" />
-    <Folder Include="src\Dragonfly\UART" />
+    <Folder Include="src\Dragonfly\Chronos" />
+    <Folder Include="src\Dragonfly\Chronos\inc" />
+    <Folder Include="src\Dragonfly\Chronos\src" />
+    <Folder Include="src\Dragonfly\MotherBrain" />
     <Folder Include="src\Dragonfly\RadioComm" />
-    <Folder Include="src\Dragonfly\PwrMgr" />
-    <Folder Include="src\Dragonfly\UART\inc\" />
-    <Folder Include="src\Dragonfly\UART\src\" />
+    <Folder Include="src\Dragonfly\BatMan" />
     <Folder Include="src\Main" />
-    <Folder Include="src\Scripts" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

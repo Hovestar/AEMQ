@@ -85,29 +85,22 @@ SUBDIRS :=  \
 ../src/asf/thirdparty/FreeRTOS/portable/MemMang/ \
 ../src/Config \
 ../src/Dragonfly \
-../src/Dragonfly/ADC \
-../src/Dragonfly/ADC/inc \
-../src/Dragonfly/ADC/src \
-../src/Dragonfly/PIDCtrl/inc/ \
-../src/Dragonfly/PIDCtrl/src/ \
-../src/Dragonfly/PwrMgr/inc/ \
-../src/Dragonfly/PwrMgr/src/ \
+../src/Dragonfly/MotherBrain/inc \
+../src/Dragonfly/MotherBrain/src \
+../src/Dragonfly/BatMan/inc \
+../src/Dragonfly/BatMan/src \
+../src/Dragonfly/PaulBunyan \
+../src/Dragonfly/PaulBunyan/inc \
+../src/Dragonfly/PaulBunyan/src \
 ../src/Dragonfly/RadioComm/inc/ \
 ../src/Dragonfly/RadioComm/src/ \
-../src/Dragonfly/Range \
-../src/Dragonfly/Range/inc/ \
-../src/Dragonfly/Range/src/ \
-../src/Dragonfly/Stabilize \
-../src/Dragonfly/PIDCtrl \
-../src/Dragonfly/Stabilize/inc/ \
-../src/Dragonfly/Stabilize/src/ \
-../src/Dragonfly/UART \
+../src/Dragonfly/Chronos \
+../src/Dragonfly/Chronos/inc \
+../src/Dragonfly/Chronos/src \
+../src/Dragonfly/MotherBrain \
 ../src/Dragonfly/RadioComm \
-../src/Dragonfly/PwrMgr \
-../src/Dragonfly/UART/inc/ \
-../src/Dragonfly/UART/src/ \
-../src/Main \
-../src/Scripts
+../src/Dragonfly/BatMan \
+../src/Main
 
 
 # Add inputs and outputs from these tool invocations to the build variables 
