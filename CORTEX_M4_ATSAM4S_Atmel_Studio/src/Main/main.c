@@ -90,9 +90,15 @@
 #include <asf.h>
 #include <ioport.h>
 
+/* Task includes */
+#include "PaulBunyan.h"
+
 /* Set mainCREATE_SIMPLE_BLINKY_DEMO_ONLY to one to run the simple blinky demo,
 or 0 to run the more comprehensive test and demo application. */
-#define mainCREATE_SIMPLE_BLINKY_DEMO_ONLY	1
+#define mainCREATE_SIMPLE_BLINKY_DEMO_ONLY	0
+
+/* Task priorities */
+#define PAUL_BUNYAN_TASK_PRIORITY	( tskIDLE_PRIORITY + 1 )
 
 /*-----------------------------------------------------------*/
 
@@ -125,12 +131,25 @@ int main( void )
 	prvSetupHardware();
 	
 	ioport_set_pin_dir(LED_0_PIN, IOPORT_DIR_OUTPUT);
+	
+	/* Define the logging task, PaulBunyan */
+	xTaskCreate( PaulBunyanTask,
+				(signed char *)"PaulBunyan",
+				configMINIMAL_STACK_SIZE,
+				(void *)NULL,
+				PAUL_BUNYAN_TASK_PRIORITY,
+				NULL );
 
 	/* The mainCREATE_SIMPLE_BLINKY_DEMO_ONLY setting is described at the top
 	of this file. */
 	#if mainCREATE_SIMPLE_BLINKY_DEMO_ONLY == 1
 	{
 		main_blinky();
+	}
+	#else
+	{
+		/* Start the tasks */
+		vTaskStartScheduler();
 	}
 	#endif
 
@@ -212,7 +231,7 @@ void vApplicationTickHook( void )
 	#if ( mainCREATE_SIMPLE_BLINKY_DEMO_ONLY == 0 )
 	{
 		/* In this case the tick hook is used as part of the queue set test. */
-		vQueueSetAccessQueueSetFromISR();
+		//vQueueSetAccessQueueSetFromISR();
 	}
 	#endif /* mainCREATE_SIMPLE_BLINKY_DEMO_ONLY */
 }

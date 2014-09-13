@@ -2,6 +2,8 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
+src\Dragonfly\PaulBunyan\src\PaulBunyan.c
+
 src\ASF\common\services\serial\usart_serial.c
 
 src\ASF\sam\boards\sam4s_xplained_pro\init.c

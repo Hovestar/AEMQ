@@ -9,8 +9,7 @@
 #ifndef PAULBUNYAN_H_
 #define PAULBUNYAN_H_
 
-
-
+void PaulBunyanTask( void *pvParameters );
 
 
 #endif /* PAULBUNYAN_H_ */

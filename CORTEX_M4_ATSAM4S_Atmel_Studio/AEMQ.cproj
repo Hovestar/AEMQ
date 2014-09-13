@@ -410,6 +410,9 @@
       <Value>../src/ASF/sam/drivers/uart</Value>
       <Value>../src/ASF/common/services/serial/sam_uart</Value>
       <Value>../src/ASF/common/services/serial</Value>
+      <Value>../src/Dragonfly/PaulBunyan/inc</Value>
+      <Value>../src/Dragonfly/PaulBunyan/src</Value>
+      <Value>../src/Main</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.OtherFlags>-fdata-sections</armgcc.compiler.optimization.OtherFlags>
@@ -510,6 +513,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\Dragonfly\PaulBunyan\inc\PaulBunyan.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Dragonfly\PaulBunyan\src\PaulBunyan.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\Dragonfly\RadioComm\inc\RadioComm.h">
