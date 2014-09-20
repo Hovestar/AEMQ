@@ -92,6 +92,10 @@
 
 /* Task includes */
 #include "PaulBunyan.h"
+#include "BatMan.h"
+#include "Chronos.h"
+#include "MotherBrain.h"
+#include "RadioComm.h"
 
 /* Set mainCREATE_SIMPLE_BLINKY_DEMO_ONLY to one to run the simple blinky demo,
 or 0 to run the more comprehensive test and demo application. */
@@ -99,6 +103,10 @@ or 0 to run the more comprehensive test and demo application. */
 
 /* Task priorities */
 #define PAUL_BUNYAN_TASK_PRIORITY	( tskIDLE_PRIORITY + 1 )
+#define BAT_MAN_TASK_PRIORITY		( tskIDLE_PRIORITY + 1 )
+#define CHRONOS_TASK_PRIORITY		( tskIDLE_PRIORITY + 1 )
+#define MOTHER_BRAIN_TASK_PRIORITY	( tskIDLE_PRIORITY + 1 )
+#define RADIO_COMM_TASK_PRIORITY	( tskIDLE_PRIORITY + 1 )
 
 /*-----------------------------------------------------------*/
 
@@ -138,6 +146,34 @@ int main( void )
 				configMINIMAL_STACK_SIZE,
 				(void *)NULL,
 				PAUL_BUNYAN_TASK_PRIORITY,
+				NULL );
+	/* Define the Battery Management task, BatMan */
+	xTaskCreate( BatManTask,
+				(signed char *)"BatMan",
+				configMINIMAL_STACK_SIZE,
+				(void *)NULL,
+				BAT_MAN_TASK_PRIORITY,
+				NULL );
+	/* Define the Timing task, Chronos */
+	xTaskCreate( ChronosTask,
+				(signed char *)"Chronos",
+				configMINIMAL_STACK_SIZE,
+				(void *)NULL,
+				CHRONOS_TASK_PRIORITY,
+				NULL );
+	/* Define the Main task, MotherBrain */
+	xTaskCreate( MotherBrainTask,
+				(signed char *)"MotherBrain",
+				configMINIMAL_STACK_SIZE,
+				(void *)NULL,
+				MOTHER_BRAIN_TASK_PRIORITY,
+				NULL );
+	/* Define the Communication task, RadioComm */
+	xTaskCreate( RadioCommTask,
+				(signed char *)"RadioComm",
+				configMINIMAL_STACK_SIZE,
+				(void *)NULL,
+				RADIO_COMM_TASK_PRIORITY,
 				NULL );
 
 	/* The mainCREATE_SIMPLE_BLINKY_DEMO_ONLY setting is described at the top
