@@ -18,6 +18,8 @@ _CU Robotics Software Team_
 
 
 _CU Robotics Mech/Electrical Team_
+
+
 |Task Description | Who is responsible? | Approximate Deadline|
 |-----------------|----------------------|---------|
 |Assemble Quad | All Mech/Elec team | 9/20/14 |
